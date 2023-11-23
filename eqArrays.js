@@ -1,18 +1,31 @@
-const eqArrays = (actual, expected) => {
-
-  actual = JSON.stringify(actual)
-  expected = JSON.stringify(expected)
-
-  if (actual === expected){
- 
-  console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`)
-
-} else if (actual !== expected){
+const assertEqual = (actual, expected) => {
+  if (actual == expected){
+    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`)
+  } else {
     console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`)
   }
 };
 
+const eqArrays = (actual, expected) =>{
+    if (actual.length != expected.length) {
+        return false;
+    } else {
+        let result = false;
+        for (let i = 0; i < actual.length; i++) {
+            if (actual[i] !== expected[i]) {
+                return false;
+            } else {
+                result = true;
+            }
+        }
+        return result;
+    }
+}
+
 
 // TEST CODE
-eqArrays([1,2,3],[1,2,3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true);
+assertEqual(eqArrays([5, 6, 3], [4, 2, 1]),false);
+assertEqual(eqArrays([6, 3], [4, 2, 1]),false);
+assertEqual(eqArrays([5,4,6],[5,4,6]),false);
