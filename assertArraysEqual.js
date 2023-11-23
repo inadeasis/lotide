@@ -21,14 +21,12 @@ const eqArrays = (actual, expected) =>{
 // Implement assertArraysEqual which will take in two arrays and console.log an appropriate message to the console.
 
 const assertArraysEqual = (actual, expected) =>{
-  const inspect = require('util').inspect;
   if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+    console.log(`✅✅✅ Assertion Passed: ${(actual)} === ${(expected)}`);
   }else{
-    console.log(`🔴🔴🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+    console.log(`🔴🔴🔴 Assertion Failed: ${(actual)} !== ${(expected)}`);
   }
 };
-
 
 // TEST CODE
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
