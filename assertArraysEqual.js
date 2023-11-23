@@ -31,8 +31,8 @@ const assertArraysEqual = (actual, expected) =>{
 
 
 // TEST CODE
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]),false);
-assertArraysEqual(eqArrays([5, 6, 3], [4, 2, 1]),false);
-assertArraysEqual(eqArrays([6, 3], [4, 2, 1]),false);
-assertArraysEqual(eqArrays([5,4,6],[5,4,6]),true);
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
+assertArraysEqual([1, 2, 3], [3, 2, 1]);
+assertArraysEqual([5, 6, 3], [4, 2, 1]);
+assertArraysEqual([6, 3], [4, 2, 1]);
+assertArraysEqual([5,4,6],[5,4,6]);
