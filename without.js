@@ -41,10 +41,10 @@ assertArraysEqual([5,4,6],[5,4,6]);
 const without = (source, itemsToRemove) =>{
   let newArr = [];
   for (let i = 0; i<source.length; i++){
-    source = source.filter(number => number !== itemsToRemove[i])
+    newArr = source.filter(number => number !== itemsToRemove[i])
     } 
-    console.log(source)
-    return source
+    console.log(newArr)
+    return newArr
   }
   
 without([1, 2, 3], [1])
