@@ -41,7 +41,10 @@ assertArraysEqual([5,4,6],[5,4,6]);
 const without = (source, itemsToRemove) =>{
   let newArr = [];
   for (let i = 0; i<source.length; i++){
-    newArr = source.filter(number => number !== itemsToRemove[i])
+    if (source[i] !== itemsToRemove){
+      newArr.push(source[i])
+    }
+   // newArr = source.filter(number => number !== itemsToRemove[i])
     } 
     console.log(newArr)
     return newArr
