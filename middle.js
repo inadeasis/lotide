@@ -1,5 +1,5 @@
 const eqArrays = (actual, expected) =>{
-    if (actual.length != expected.length) {
+    if (actual.length !== expected.length) {
         return false;
     }
         for (let i = 0; i < actual.length; i++) {
@@ -32,14 +32,9 @@ const middle = (array) => {
   let middle = []
 
   if ((array.length === 1) || (array.length === 2)){
-    middle = middle  
     
   } else if (array.length %2 === 0) {
-    let value = Math.floor(array.length / 2)
-    let secondVal = array[value]
-    let firstVal = array[value - 1]
-    middle.push(firstVal) 
-    middle.push(secondVal)
+    middle.push(array[Math.floor(array.length / 2)])
 
   } else {
     
