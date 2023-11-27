@@ -1,11 +1,3 @@
-const assertEqual = (actual, expected) => {
-  if (actual == expected){
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`)
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`)
-  }
-};
-
 const eqArrays = (actual, expected) =>{
     if (actual.length != expected.length) {
         return false;
@@ -40,12 +32,12 @@ const middle = (array) => {
   let middle = []
 
   if ((array.length === 1) || (array.length === 2)){
-    middle.push()  
+    middle = middle  
     
   } else if (array.length %2 === 0) {
     let value = Math.floor(array.length / 2)
-    secondVal = array[value]
-    firstVal = array[value - 1]
+    let secondVal = array[value]
+    let firstVal = array[value - 1]
     middle.push(firstVal) 
     middle.push(secondVal)
 
@@ -56,7 +48,6 @@ const middle = (array) => {
     middle.push(value) 
     
   }
-  console.log(middle)
   return middle
   
 }
