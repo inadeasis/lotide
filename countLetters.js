@@ -15,9 +15,12 @@ const countLetters = (sentence) =>{
           result[letter] = 1
         }
     } 
-  console.log(result)
+  //console.log(result)
   return result
 }
 
-countLetters("Hello, this is my test")
-countLetters("test number two")
+
+let result1 = countLetters("Hello, this is my test");
+assertEqual(result1['H'], 1)
+let result2 = countLetters("test number two")
+assertEqual(result2['w'], 5)
