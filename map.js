@@ -35,5 +35,5 @@ const map = (array, callback) =>{
   return results;
 }
 
-const results1 = map(pets, pet => pet[0]);
-console.log(results1)
+const expected_output = ['A', 'L', 'K', 'J', 'R'];
+assertArraysEqual(map(pets, pet => pet[0]), expected_output);
