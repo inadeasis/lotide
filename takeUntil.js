@@ -1,5 +1,5 @@
 const eqArrays = (actual, expected) =>{
-    if (actual.length != expected.length) {
+    if (actual.length !== expected.length) {
         return false;
     }
         for (let i = 0; i < actual.length; i++) {
@@ -30,7 +30,7 @@ const takeUntil = function(array, callback) {
       // if function is true, return array
       return newArr
     } else {
-      //keep pushing until array is true
+      //keep pushing until items to new array until cb function returns truthy
       newArr.push(item)
     } 
   }
