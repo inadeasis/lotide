@@ -27,7 +27,7 @@ const test1 = {
 };
 
 const result1 = findKey(test1, x => x.stars === 3); // => "Akaleri"
-const result2 = findKey(test1, x => x.stars === 1); //=> "elBulli"
+const result2 = findKey(test1, x => x.stars === 1); //=> "Blue Hill"
 
 assertEqual(result1, "Akaleri");
 assertEqual(result2, "noma");
