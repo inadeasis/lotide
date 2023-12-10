@@ -1,24 +1,5 @@
-const eqArrays = (actual, expected) =>{
-    if (actual.length !== expected.length) {
-        return false;
-    }
-        for (let i = 0; i < actual.length; i++) {
-            if (actual[i] !== expected[i]) {
-                return false;
-            } 
-        }
-        return true;
-    }
-
-// Implement assertArraysEqual which will take in two arrays and console.log an appropriate message to the console.
-
-const assertArraysEqual = (actual, expected) =>{
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${(actual)} === ${(expected)}`);
-  }else{
-    console.log(`🔴🔴🔴 Assertion Failed: ${(actual)} !== ${(expected)}`);
-  }
-};
+const eqArrays = require("./eqArrays")
+const assertArraysEqual = require("./assertEqual")
 
 // TEST CODE
 assertArraysEqual([1, 2, 3], [1, 2, 3]);
@@ -47,15 +28,4 @@ const middle = (array) => {
   
 }
 
-
-//TEST
-middle([1]) // => []
-middle([1, 2]) // => []
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5]) // => [3]
-middle([1, 2, 3, 4]) // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
-
-assertArraysEqual(middle([1, 2]),[])
-assertArraysEqual(middle([1, 2, 3, 4, 5]),[3])
-assertArraysEqual(middle([1, 2, 3, 4, 5,6]),[3,4])
+module.exports = middle;
