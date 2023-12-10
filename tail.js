@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const tail = (arr) => {
   const newArr = arr.slice(1)
   return newArr

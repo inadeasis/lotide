@@ -1,4 +1,3 @@
-const assertEqual = require('./assertEqual')
 const eqArrays = (actual, expected) =>{
     if (actual.length != expected.length) {
         return false;
