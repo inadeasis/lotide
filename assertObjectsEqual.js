@@ -14,18 +14,16 @@ const assertObjectsEqual = function(actual, expected) {
 
 };
 
-const pets = { 
+const pets1 = { 
   dog: "Arya",
   cat: "Luna",
   hamster: "Gigi"
 }
 
-const petObj = {
-  color: "white",
-  size: "small",
-  age: 1
+const pets2 = {
+  dog: "Arya",
+  cat: "Luna",
+  hamster: "Gigi"
 }
 
-eqObjects(pets , petObj); // => true
-assertEqual(eqObjects(pets , petObj), false);
-assertObjectsEqual(assertEqual(eqObjects(pets , petObj), false), false)
+assertObjectsEqual(pets1, pets2); 
