@@ -9,6 +9,5 @@ const assertArraysEqual = (actual, expected) =>{
     console.log(`🔴🔴🔴 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-assertArraysEqual(null,[])
 
 module.exports = assertArraysEqual;
