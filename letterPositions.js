@@ -1,6 +1,3 @@
-const assertEqual = require("./assertEqual")
-const eqArrays = require("./eqArrays")
-
 const letterPositions = (sentence) => {
   const results = {};
   

@@ -1,4 +1,3 @@
-const assertEqual = require("./assertEqual")
 const eqObjects = require("./eqObjects")
 
 // Implement assertObjectsEqual which will take in two objects and console.log an appropriate message to the console.

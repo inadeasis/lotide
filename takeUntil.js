@@ -1,25 +1,5 @@
-const eqArrays = (actual, expected) =>{
-    if (actual.length !== expected.length) {
-        return false;
-    }
-        for (let i = 0; i < actual.length; i++) {
-            if (actual[i] !== expected[i]) {
-                return false;
-            } 
-        }
-        return true;
-    }
-
-// Implement assertArraysEqual which will take in two arrays and console.log an appropriate message to the console.
-
-const assertArraysEqual = (actual, expected) =>{
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: ${(actual)} === ${(expected)}`);
-  }else{
-    console.log(`🔴🔴🔴 Assertion Failed: ${(actual)} !== ${(expected)}`);
-  }
-};
-
+const eqArrays = require("./eqArrays")
+const assertArraysEqual = require("./assertArraysEqual")
 
 //Implement takeUntil which will keep collecting items from a provided array until the callback provided returns a truthy value.
 
