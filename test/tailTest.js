@@ -10,4 +10,10 @@ describe("#tail", () => {
      it("returns Lighthouse", () => {
     assert.strictEqual(tail(words)[0], 'Lighthouse'); 
    });
+   it("returns undefined", () => { 
+    assert.strictEqual(tail(undefined)[0], undefined); 
+  }); 
+    it("returns undefined", () => { 
+      assert.strictEqual(tail(null)[0], undefined); 
+  });
 });

@@ -1,22 +1,5 @@
-const assertEqual = (actual, expected) => {
-  if (actual == expected){
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`)
-  } else {
-    console.log(`🔴🔴🔴Assertion Failed: ${actual} !== ${expected}`)
-  }
-};
+const assertEqual = require('./assertEqual')
 
-const eqArrays = (actual, expected) =>{
-    if (actual.length != expected.length) {
-        return false;
-    }
-        for (let i = 0; i < actual.length; i++) {
-            if (actual[i] !== expected[i]) {
-                return false;
-            } 
-        }
-        return true;
-    }
 // Create a function flatten which will take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array.
 
 const flatten = (array) => {
