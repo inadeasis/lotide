@@ -17,7 +17,11 @@ const flatten = (array) => {
 
   return flattened;
 }
-flatten([1, 2, [3, 4], 5, [6]])
+
+// TEST CODE
+
+console.log(flatten([1, 2, [3, 4], 5, [6]])); // should print [1, 2, 3, 4, 5, 6]
+console.log(flatten(["hello", ["world"], "lighthouse"])); // should print ["hello", "world", "lighthouse"]
 
 const words = ["hello", ["world"], "lighthouse"];
 flatten(words);
